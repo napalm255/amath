@@ -3,6 +3,7 @@
 amath is an advanced math module
 """
 
+from __future__ import absolute_import
 import math
 
 def is_even(num):
