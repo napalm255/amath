@@ -4,7 +4,7 @@ import amath
 
 a = amath.facts(6)
 print(a)
-a = amath.facts([6,5])
+a = amath.facts([6,28,496])
 print(a)
 a = amath.facts(1,33)
 print(a)
