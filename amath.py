@@ -41,28 +41,7 @@ def is_palindrome(num):
         return True
     return False
 
-def facts(*args):
-    # int = single integer to gather facts = facts(6)
-    # list = list of numbers to gather facts = facts([6,28])
-    # int,int = two integers defining start an and end range to gather facts = facts(1,33)
-    if len(args) > 2: return False
-    elif len(args) == 1:
-        if isinstance(args[0], int):
-            return facts_get(args[0])
-        elif isinstance(args[0], list):
-            f = {}
-            for i in args[0]:
-                f[i] = facts_get(i)
-            return f
-    elif len(args) == 2:
-        if isinstance(args[0], int) and isinstance(args[1], int):
-            f = {} 
-            for i in range(args[0],args[1] + 1):
-                f[i] = facts_get(i)
-            return f
-    return
-
-def facts_get(num):
+def get_facts(num):
     f = {
         'palindrome': is_palindrome(num),
         'perfect'   : is_perfect(num),
@@ -71,3 +50,24 @@ def facts_get(num):
         'odd'       : is_odd(num)
     }
     return f
+
+def facts(*args):
+    # int = single integer to gather facts = facts(6)
+    # list = list of numbers to gather facts = facts([6,28])
+    # int,int = two integers defining start an and end range to gather facts = facts(1,33)
+    if len(args) > 2: return False
+    elif len(args) == 1:
+        if isinstance(args[0], int):
+            return get_facts(args[0])
+        elif isinstance(args[0], list):
+            f = {}
+            for i in args[0]:
+                f[i] = get_facts(i)
+            return f
+    elif len(args) == 2:
+        if isinstance(args[0], int) and isinstance(args[1], int):
+            f = {} 
+            for i in range(args[0],args[1] + 1):
+                f[i] = get_facts(i)
+            return f
+    return
