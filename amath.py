@@ -43,8 +43,7 @@ def is_prime(num):
         return False
     # check if num is divisible by any number up to the square root of num
     for i in range(2, int(math.sqrt(num)) + 1):
-        # if num is evenly divisible by number (i) then
-        # num is not prime
+        # if num is evenly divisible by number (i) then num is not prime
         if num % i == 0:
             return False
     return True
@@ -70,7 +69,7 @@ def facts(*args):
     f = {}
     if len(args) == 1:
         if isinstance(args[0], int):
-            return get_facts(args[0])
+            f = get_facts(args[0])
         elif isinstance(args[0], list):
             for i in args[0]:
                 f[i] = get_facts(i)
