@@ -8,13 +8,18 @@ import math
 
 def is_even(num):
     """returns true if given number is even"""
-    # if num is evenly divisible by 2 then it's even
+    # if num is evenly divisible by 2
     return num % 2 == 0
 
 def is_odd(num):
     """returns true if given number is odd"""
-    # if num is not evenly divisible by 2 then it's odd
+    # if num is not evenly divisible by 2
     return num % 2 != 0
+
+def is_palindrome(num):
+    """return true if given number is a palindrome"""
+    # if num equals the reversal of num
+    return str(num) == str(num)[::-1]
 
 def is_perfect(num):
     """returns true if given number is perfect"""
@@ -43,13 +48,6 @@ def is_prime(num):
         if num % i == 0:
             return False
     return True
-
-def is_palindrome(num):
-    """return true if given number is a palindrome"""
-    # check if num equals the reversal of num
-    if str(num) == str(num)[::-1]:
-        return True
-    return False
 
 def get_facts(num):
     """return dict with facts of given number"""
