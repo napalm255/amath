@@ -25,7 +25,7 @@ def is_perfect(num):
     # initialize the sum
     s = 0
     # loop through all numbers from 1 to num
-    for i in range(1, num):
+    for i in xrange(1, num):
         # if number (i) is a proper positive divisor to num then
         # add the number (i) to the sum
         if num % i == 0:
@@ -33,6 +33,23 @@ def is_perfect(num):
     # if the sum matches num then it is a perfect number
     if s == num:
         return True
+    return False
+
+def is_perfect_v2(num):
+    """returns true if given number is perfect"""
+    # initialize the sum; include 1 by starting at 1
+    s = 1
+    # loop through all numbers from 1 to half of num
+    for i in xrange(2, num):
+        # divide num by i
+        a = float(num) / float(i)
+        # if the answer is an integer then i and a are both positive divisors
+        # add the numbers (i) and (a) to the sum
+        if a.is_integer():
+            s += a + i
+        # if the sum matches num then it is a perfect number
+        if int(s) == int(num):
+            return True
     return False
 
 def is_prime(num):
