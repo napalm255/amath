@@ -64,9 +64,9 @@ def facts(*args):
        list = list of numbers to gather facts = facts([6,28])
        int,int = two integers defining start an and end range to gather facts = facts(1,33)
     """
-    if len(args) > 2:
-        return False
     f = {}
+    if len(args) > 2:
+        return f
     if len(args) == 1:
         if isinstance(args[0], int):
             f = get_facts(args[0])
