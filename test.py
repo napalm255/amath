@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import amath
 
-numbers = [69,88,6,496,28,121,888]
+numbers = [6,28,69,88,121,496]
 line = str('-'*40)
 
 for n in numbers:
@@ -14,5 +14,5 @@ for n in numbers:
 print('get_facts(%s) = %s\n%s'   % (numbers[3], amath.get_facts(numbers[3]), line))
 print('facts(%s) = %s\n%s'       % (numbers[3], amath.facts(numbers[3]), line))
 print('facts(%s) = %s\n%s'       % (numbers, amath.facts(numbers), line))
-print('facts(%s,%s) = %s\n%s'    % (numbers[2], numbers[4], amath.facts(numbers[2], numbers[4]), line))
-print('facts(%s,%s,%s) = %s\n%s' % (numbers[2], numbers[4], numbers[3], amath.facts(numbers[2], numbers[4], numbers[3]), line))
+print('facts(%s,%s) = %s\n%s'    % (numbers[1], numbers[2], amath.facts(numbers[1], numbers[2]), line))
+print('facts(%s,%s,%s) = %s\n%s' % (numbers[1], numbers[2], numbers[3], amath.facts(numbers[1], numbers[2], numbers[3]), line))
