@@ -2,13 +2,16 @@
 from sys import argv
 import amath
 
-if argv[1].isdigit():
-    num = int(argv[1])
-    n = "is not"
-    perf = amath.is_perfect(num)
-    if perf:
-        n = "is"
-    print(perf)
-    print('the number %s, %s a perfect number' % (num, n))
+if len(argv) > 1:
+    if argv[1].isdigit():
+        num = int(argv[1])
+        n = "is not"
+        perf = amath.is_perfect(num)
+        if perf:
+            n = "is"
+        print(perf)
+        print('the number %s, %s a perfect number' % (num, n))
+    else:
+        print('must enter a digit')
 else:
-    print('must be a digit')
+    print('must enter a digit')
