@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 """
 amath is an advanced math module
 """
