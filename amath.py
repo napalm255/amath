@@ -58,6 +58,7 @@ def is_perfect_v1(num):
 
 def is_perfect_v3(num):
     """returns true if given number is perfect"""
+    print("v3")
     # initialize the sum; include 1 by starting at 1
     s = 1
     i = 2
@@ -81,6 +82,7 @@ def is_perfect_v3(num):
 
 def is_perfect_v4(num):
     """returns true if given number is perfect"""
+    print("v4")
     # initialize the sum; include 1 by starting at 1
     i = 2
     div = [1]
@@ -105,6 +107,7 @@ def is_perfect_v4(num):
 
 def is_perfect_v5(n):
     """nobler's"""
+    print("v5")
     n = int(n)
     lowDivisor= 2 # Skipping 1 since it always works
     sumDivisors = 0
