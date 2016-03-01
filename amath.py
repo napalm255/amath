@@ -24,8 +24,8 @@ def is_perfect(num):
     """returns true if given number is perfect"""
     # initialize the sum
     s = 0
-    # loop through all numbers from 1 to num
-    for i in xrange(1, num):
+    # loop through all possible numbers
+    for i in xrange(1, (num / 2) + 1):
         # if number (i) is a proper positive divisor to num then
         # add the number (i) to the sum
         if num % i == 0:
