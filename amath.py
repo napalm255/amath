@@ -22,6 +22,9 @@ def is_palindrome(num):
 
 def is_perfect(num):
     """returns true if given number is perfect"""
+    # skip 1
+    if num == 1:
+        return False
     # initialize the sum; include 1 by starting at 1
     s = 1
     # loop through all possible numbers
