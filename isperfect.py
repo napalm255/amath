@@ -5,12 +5,7 @@ import amath
 if len(argv) > 1:
     if argv[1].isdigit():
         num = int(argv[1])
-        n = "is not"
-        perf = amath.is_perfect(num)
-        if perf:
-            n = "is"
-        print(perf)
-        #print('the number %s, %s a perfect number' % (num, n))
+        print(amath.is_perfect(num))
     else:
         print('must enter a digit')
 else:
