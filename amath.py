@@ -38,8 +38,8 @@ def is_perfect(num):
             if s > num:
                 break
             # if the sum matches num then it is a perfect number
-            if s == num:
-                return True
+    if s == num:
+        return True
     return False
 
 def is_perfect_v1(num):
@@ -74,10 +74,10 @@ def is_perfect_v3(num):
             # if the sum is greater than num it is not a perfect number
             if s > num:
                 break
-            # if the sum matches num then it is a perfect number
-            if s == num:
-                return True
         i += 1
+    # if the sum matches num then it is a perfect number
+    if s == num:
+        return True
     return False
 
 def is_perfect_v4(num):
@@ -99,10 +99,10 @@ def is_perfect_v4(num):
             # if the sum is greater than num it is not a perfect number
             if sum(div) > num:
                 break
-            # if the sum matches num then it is a perfect number
-            if sum(div) == num:
-                return True
         i += 1
+    # if the sum matches num then it is a perfect number
+    if sum(div) == num:
+        return True
     return False
 
 def is_perfect_v5(n):
