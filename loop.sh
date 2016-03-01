@@ -7,6 +7,6 @@ echo ":: v2 (main):"
 i=0
 while true
 do
-  echo ${i} $(python a.py v3 ${i})
+  echo ${i} $(python a.py v2 ${i})
   i=$[$i + 1]
 done
