@@ -82,7 +82,6 @@ def is_perfect_v3(num):
 def is_perfect_v4(num):
     """returns true if given number is perfect"""
     # initialize the sum; include 1 by starting at 1
-    s = 1
     i = 2
     d = [1]
     while True:
