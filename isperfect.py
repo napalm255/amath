@@ -10,7 +10,7 @@ if len(argv) > 1:
         if perf:
             n = "is"
         print(perf)
-        print('the number %s, %s a perfect number' % (num, n))
+        #print('the number %s, %s a perfect number' % (num, n))
     else:
         print('must enter a digit')
 else:
