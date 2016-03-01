@@ -5,7 +5,7 @@ import amath
 if len(argv) > 2:
     v = argv[1]
     n = argv[2]
-    ver = ['v1', 'v2', 'v3', 'v4']
+    ver = ['v1', 'v2', 'v3', 'v4', 'v5']
     if v not in ver:
         print('must suuply version %s' % (ver))
         exit()
@@ -21,5 +21,7 @@ if len(argv) > 2:
         print(amath.is_perfect_v3(int(n)))
     if v == 'v4':
         print(amath.is_perfect_v4(int(n)))
+    if v == 'v5':
+        print(amath.is_perfect_v5(int(n)))
 else:
     print('invalid arguments')

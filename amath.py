@@ -103,7 +103,7 @@ def is_perfect_v4(num):
         i += 1
     return False
 
-def is_perfect_v5(num):
+def is_perfect_v5(n):
     """nobler's"""
     n = int(n)
     lowDivisor= 2 # Skipping 1 since it always works
