@@ -103,6 +103,25 @@ def is_perfect_v4(num):
         i += 1
     return False
 
+def is_perfect_v5(num):
+    """nobler's"""
+    n = int(n)
+    lowDivisor= 2 # Skipping 1 since it always works
+    sumDivisors = 0
+    while True:
+        if(n % lowDivisor== 0):
+            highDivisor = n / lowDivisor
+            if(lowDivisor>= highDivisor): break # Break when reached all divisors 
+            sumDivisors += highDivisor + lowDivisor
+        if(sumDivisors > n): break # Break if not perfect
+        lowDivisor += 1
+    sumDivisors += 1 # Have to add the original divisor
+    if sumDivisors == n:
+        return True
+    else: 
+        return False
+
+
 def is_prime(num):
     """return true if given number is prime"""
     # no number less than 2 is prime
