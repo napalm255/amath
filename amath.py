@@ -33,7 +33,7 @@ def is_perfect(num):
         if num % i == 0:
             a = num / i
             # crossed median, ran out of possible divisors
-            if i > a:
+            if i >= a:
                 break
             # add both divisors to sum
             s += a + i
@@ -74,7 +74,7 @@ def is_perfect_list(num):
         if num % i == 0:
             a = num / i
             # crossed median, ran out of possible divisors
-            if i > a:
+            if i >= a:
                 break
             # add both divisors to sum
             div.append(i)
