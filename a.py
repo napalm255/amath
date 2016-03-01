@@ -14,9 +14,9 @@ if len(argv) > 2:
         exit()
 
     if v == 'v1':
-        print(amath.is_perfect(int(n)))
+        print(amath.is_perfect_v1(int(n)))
     if v == 'v2':
-        print(amath.is_perfect_v2(int(n)))
+        print(amath.is_perfect(int(n)))
     if v == 'v3':
         print(amath.is_perfect_v3(int(n)))
     if v == 'v4':
