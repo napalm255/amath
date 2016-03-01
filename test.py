@@ -5,7 +5,6 @@ numbers = [6,28,69,88,121,496]
 line = str('-'*40)
 
 for n in numbers:
-    print('is_perfect_v2(%d) = %s' % (n, amath.is_perfect_v2(n)))
     print('is_perfect(%d) = %s'    % (n, amath.is_perfect(n)))
     print('is_palindrome(%d) = %s' % (n, amath.is_palindrome(n)))
     print('is_even(%d) = %s'       % (n, amath.is_even(n)))
