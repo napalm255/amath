@@ -104,19 +104,6 @@ def is_perfect_v4(num):
         i += 1
     return False
 
-def get_divisors(num):
-    d = [1]
-    # loop through all possible numbers
-    for i in xrange(2, (num / 2) + 1):
-        if num % i == 0:
-            a = num / i
-            # crossed median, ran out of possible divisors
-            if i > a:
-                break
-            d.append(i)
-            d.append(a)
-    return sorted(d)
-
 def is_prime(num):
     """return true if given number is prime"""
     # no number less than 2 is prime
@@ -129,10 +116,25 @@ def is_prime(num):
             return False
     return True
 
+def get_divisors(num):
+    """return list of all divisors of given number"""
+    d = [1]
+    # loop through all possible numbers
+    for i in xrange(2, (num / 2) + 1):
+        if num % i == 0:
+            a = num / i
+            # crossed median, ran out of possible divisors
+            if i > a:
+                break
+            d.append(i)
+            d.append(a)
+    return sorted(d)
+
 def get_facts(num):
     """return dict with facts of given number"""
     return {
         'palindrome': is_palindrome(num),
+        'divisors'  : get_divisors(num),
         'perfect'   : is_perfect(num),
         'prime'     : is_prime(num),
         'even'      : is_even(num),
