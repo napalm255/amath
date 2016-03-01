@@ -56,6 +56,67 @@ def is_perfect_v2(num):
                 return True
     return False
 
+def is_perfect_v3(num):
+    """returns true if given number is perfect"""
+    # initialize the sum; include 1 by starting at 1
+    s = 1
+    i = 2
+    while True:
+        # if (i) is a proper positive divisor to num
+        if num % i == 0:
+            a = num / i
+            # crossed median, ran out of possible divisors
+            if i > a:
+                break
+            # add both divisors to sum
+            s += a + i
+            # if the sum is greater than num it is not a perfect number
+            if s > num:
+                break
+            # if the sum matches num then it is a perfect number
+            if s == num:
+                return True
+        i += 1
+    return False
+
+def is_perfect_v4(num):
+    """returns true if given number is perfect"""
+    # initialize the sum; include 1 by starting at 1
+    s = 1
+    i = 2
+    d = [1]
+    while True:
+        # if (i) is a proper positive divisor to num
+        if num % i == 0:
+            a = num / i
+            # crossed median, ran out of possible divisors
+            if i > a:
+                break
+            # add both divisors to sum
+            d.append(i)
+            d.append(a)
+            # if the sum is greater than num it is not a perfect number
+            if sum(d) > num:
+                break
+            # if the sum matches num then it is a perfect number
+            if sum(d) == num:
+                return True
+        i += 1
+    return False
+
+def get_divisors(num):
+    d = [1]
+    # loop through all possible numbers
+    for i in xrange(2, (num / 2) + 1):
+        if num % i == 0:
+            a = num / i
+            # crossed median, ran out of possible divisors
+            if i > a:
+                break
+            d.append(i)
+            d.append(a)
+    return sorted(d)
+
 def is_prime(num):
     """return true if given number is prime"""
     # no number less than 2 is prime
