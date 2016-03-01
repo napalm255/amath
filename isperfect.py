@@ -5,7 +5,7 @@ import amath
 if len(argv) > 1:
     if argv[1].isdigit():
         num = int(argv[1])
-        print(amath.is_perfect(num))
+        print(amath.is_perfect_list(num))
     else:
         print('must enter a digit')
 else:

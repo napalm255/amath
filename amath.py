@@ -45,12 +45,15 @@ def is_perfect(num):
         return True
     return False
 
-def is_perfect_v1(num):
+def is_perfect_slow(num):
     """returns true if given number is perfect"""
+    # skip 1
+    if num == 1:
+        return False
     # initialize the sum
-    s = 0
+    s = 1
     # loop through all possible numbers
-    for i in xrange(1, (num / 2) + 1):
+    for i in xrange(2, (num / 2) + 1):
         # if (i) is a proper positive divisor to num
         if num % i == 0:
             s += i
@@ -59,35 +62,14 @@ def is_perfect_v1(num):
         return True
     return False
 
-def is_perfect_v3(num):
+def is_perfect_list(num):
     """returns true if given number is perfect"""
+    # skip 1
+    if num == 1:
+        return False
     # initialize the sum; include 1 by starting at 1
-    s = 1
-    i = 2
-    while True:
-        # if (i) is a proper positive divisor to num
-        if num % i == 0:
-            a = num / i
-            # crossed median, ran out of possible divisors
-            if i > a:
-                break
-            # add both divisors to sum
-            s += a + i
-            # if the sum is greater than num it is not a perfect number
-            if s > num:
-                break
-        i += 1
-    # if the sum matches num then it is a perfect number
-    if s == num:
-        return True
-    return False
-
-def is_perfect_v4(num):
-    """returns true if given number is perfect"""
-    # initialize the sum; include 1 by starting at 1
-    i = 2
     div = [1]
-    while True:
+    for i in xrange(2, (num / 2) + 1):
         # if (i) is a proper positive divisor to num
         if num % i == 0:
             a = num / i
@@ -100,7 +82,6 @@ def is_perfect_v4(num):
             # if the sum is greater than num it is not a perfect number
             if sum(div) > num:
                 break
-        i += 1
     # if the sum matches num then it is a perfect number
     if sum(div) == num:
         return True

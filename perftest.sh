@@ -10,23 +10,9 @@ do
   /usr/bin/time -f ${tf} python ../perfectnumber/is_perfect.py ${i}
 done
 
-echo ":: v2:"
+echo ":: napalm:"
 for i in "${pn[@]}"
 do
   echo "==:: ${i}"
-  /usr/bin/time -f ${tf} python a.py v2 ${i}
-done
-
-echo ":: v3:"
-for i in "${pn[@]}"
-do
-  echo "==:: ${i}"
-  /usr/bin/time -f ${tf} python a.py v3 ${i}
-done
-
-echo ":: v4:"
-for i in "${pn[@]}"
-do
-  echo "==:: ${i}"
-  /usr/bin/time -f ${tf} python a.py v4 ${i}
+  /usr/bin/time -f ${tf} python isperfect.py ${i}
 done
