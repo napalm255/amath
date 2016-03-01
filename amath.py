@@ -37,7 +37,7 @@ def is_perfect(num):
             # if the sum is greater than num it is not a perfect number
             if s > num:
                 break
-            # if the sum matches num then it is a perfect number
+    # if the sum matches num then it is a perfect number
     if s == num:
         return True
     return False
@@ -58,7 +58,6 @@ def is_perfect_v1(num):
 
 def is_perfect_v3(num):
     """returns true if given number is perfect"""
-    print("v3")
     # initialize the sum; include 1 by starting at 1
     s = 1
     i = 2
@@ -82,7 +81,6 @@ def is_perfect_v3(num):
 
 def is_perfect_v4(num):
     """returns true if given number is perfect"""
-    print("v4")
     # initialize the sum; include 1 by starting at 1
     i = 2
     div = [1]
@@ -104,25 +102,6 @@ def is_perfect_v4(num):
     if sum(div) == num:
         return True
     return False
-
-def is_perfect_v5(n):
-    """nobler's"""
-    print("v5")
-    n = int(n)
-    lowDivisor= 2 # Skipping 1 since it always works
-    sumDivisors = 0
-    while True:
-        if(n % lowDivisor== 0):
-            highDivisor = n / lowDivisor
-            if(lowDivisor>= highDivisor): break # Break when reached all divisors 
-            sumDivisors += highDivisor + lowDivisor
-        if(sumDivisors > n): break # Break if not perfect
-        lowDivisor += 1
-    sumDivisors += 1 # Have to add the original divisor
-    if sumDivisors == n:
-        return True
-    else: 
-        return False
 
 def is_prime(num):
     """return true if given number is prime"""
