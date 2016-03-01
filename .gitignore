@@ -1,5 +1,4 @@
 *.swp
 *.pyc
-perflog
-lastnum
-perfnum
+loop.last
+loop.perf
