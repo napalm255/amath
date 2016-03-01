@@ -83,7 +83,7 @@ def is_perfect_v4(num):
     """returns true if given number is perfect"""
     # initialize the sum; include 1 by starting at 1
     i = 2
-    d = [1]
+    div = [1]
     while True:
         # if (i) is a proper positive divisor to num
         if num % i == 0:
@@ -92,13 +92,13 @@ def is_perfect_v4(num):
             if i > a:
                 break
             # add both divisors to sum
-            d.append(i)
-            d.append(a)
+            div.append(i)
+            div.append(a)
             # if the sum is greater than num it is not a perfect number
-            if sum(d) > num:
+            if sum(div) > num:
                 break
             # if the sum matches num then it is a perfect number
-            if sum(d) == num:
+            if sum(div) == num:
                 return True
         i += 1
     return False
@@ -117,7 +117,7 @@ def is_prime(num):
 
 def get_divisors(num):
     """return list of all divisors of given number"""
-    d = [1]
+    div = [1]
     # loop through all possible numbers
     for i in xrange(2, (num / 2) + 1):
         if num % i == 0:
@@ -125,9 +125,9 @@ def get_divisors(num):
             # crossed median, ran out of possible divisors
             if i > a:
                 break
-            d.append(i)
-            d.append(a)
-    return sorted(d)
+            div.append(i)
+            div.append(a)
+    return sorted(div)
 
 def get_facts(num):
     """return dict with facts of given number"""
