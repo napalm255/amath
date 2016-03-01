@@ -38,19 +38,18 @@ def is_perfect(num):
 def is_perfect_v2(num):
     """returns true if given number is perfect"""
     # initialize the sum; include 1 by starting at 1
-    s = 1
+    s = long(1)
     # loop through all numbers from 1 to half of num
-    for i in xrange(2, (num / 2) + 1):
+    for i in xrange(2, long((num / 2) + 1)):
         # divide num by i
-        a = float(num) / float(i)
         # if the answer is an integer then i and a are both positive divisors
         # add the numbers (i) and (a) to the sum
-        if a.is_integer():
-            s += a + i
-            print(s)
-        #if s > num:
-        #    print("sum > num")
-        #    break
+        if num % i == 0:
+            a = long(num) / long(i)
+            s += long(a) + long(i)
+        if long(s) > long(num):
+            print("sum (%s) > num (%s)" % (long(s), long(num)))
+            break
         # if the sum matches num then it is a perfect number
         if long(s) == long(num):
             return True
