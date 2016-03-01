@@ -3,34 +3,30 @@ pn=(6 28 496 8128 33550336 8589869056 137438691328 2305843008139952128 265845599
 
 pn=(137438691328 2305843008139952128)
 
-echo ":: v5 (nobler):"
+echo ":: nobler:"
 for i in "${pn[@]}"
 do
-  echo ${i}
-  time python a.py v5 ${i}
-  echo "------------"
+  echo "========:: ${i}"
+  time python ../perfectnumber/is_perfect.py ${i}
 done
 
 echo ":: v2:"
 for i in "${pn[@]}"
 do
-  echo ${i}
+  echo "========:: ${i}"
   time python a.py v2 ${i}
-  echo "------------"
 done
 
 echo ":: v3:"
 for i in "${pn[@]}"
 do
-  echo ${i}
+  echo "========:: ${i}"
   time python a.py v3 ${i}
-  echo "------------"
 done
 
 echo ":: v4:"
 for i in "${pn[@]}"
 do
-  echo ${i}
+  echo "========:: ${i}"
   time python a.py v4 ${i}
-  echo "------------"
 done
