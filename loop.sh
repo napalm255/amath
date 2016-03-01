@@ -12,7 +12,7 @@ while true
 do
   if [ "$(python isperfect.py ${i})" == "True" ]; then
     echo ${i} >> loop.perf
-    if [ -e "sms.sh" ]; then
+    if [ -e "/usr/local/bin/sms.sh" ]; then
       echo "perfect number: ${i}" | sms.sh
     fi
     echo ${i}
