@@ -124,7 +124,6 @@ def is_perfect_v5(n):
     else: 
         return False
 
-
 def is_prime(num):
     """return true if given number is prime"""
     # no number less than 2 is prime
