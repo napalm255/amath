@@ -40,7 +40,6 @@ def is_perfect_v2(num):
     s = 1
     # loop through all possible numbers
     for i in xrange(2, (num / 2) + 1):
-        itr += 1
         # if (i) is a proper positive divisor to num
         if num % i == 0:
             a = num / i
