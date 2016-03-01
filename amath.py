@@ -22,20 +22,6 @@ def is_palindrome(num):
 
 def is_perfect(num):
     """returns true if given number is perfect"""
-    # initialize the sum
-    s = 0
-    # loop through all possible numbers
-    for i in xrange(1, (num / 2) + 1):
-        # if (i) is a proper positive divisor to num
-        if num % i == 0:
-            s += i
-    # if the sum matches num then it is a perfect number
-    if s == num:
-        return True
-    return False
-
-def is_perfect_v2(num):
-    """returns true if given number is perfect"""
     # initialize the sum; include 1 by starting at 1
     s = 1
     # loop through all possible numbers
@@ -54,6 +40,20 @@ def is_perfect_v2(num):
             # if the sum matches num then it is a perfect number
             if s == num:
                 return True
+    return False
+
+def is_perfect_v1(num):
+    """returns true if given number is perfect"""
+    # initialize the sum
+    s = 0
+    # loop through all possible numbers
+    for i in xrange(1, (num / 2) + 1):
+        # if (i) is a proper positive divisor to num
+        if num % i == 0:
+            s += i
+    # if the sum matches num then it is a perfect number
+    if s == num:
+        return True
     return False
 
 def is_perfect_v3(num):
