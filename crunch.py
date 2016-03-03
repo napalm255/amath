@@ -65,8 +65,6 @@ def get_last_number():
     item = response['Item']
     return int(item['number'])
 
-
-set_last_number(0, 0, 0, 0)
 while True:
     n = get_last_number() + 1
     stime = datetime.now()
