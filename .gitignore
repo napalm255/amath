@@ -1,4 +1,3 @@
 *.swp
 *.pyc
-loop.last
-loop.perf
+twilio.cfg
