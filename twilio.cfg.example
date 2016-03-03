@@ -1,0 +1,9 @@
+{
+  "account_sid" : "ACXXXXXXXXXXXXXXXXX",
+  "auth_token"  : "YYYYYYYYYYYYYYYYYY",
+  "from_number" : "+15555555555",
+  "to_numbers" : [
+                   "+12316851234",
+                   "+12316851235"
+                 ]
+}
