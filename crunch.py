@@ -6,12 +6,12 @@ import json
 from datetime import datetime
 from twilio.rest import TwilioRestClient
 
-def send_sms(to, msg):
+def sms_send(msg):
     try:
         cfg = json.load(open('twilio.cfg'))
         client = TwilioRestClient(cfg['account_sid'], cfg['auth_token'])
-        for each t in cfg['to_numbers']:
-            message = client.messages.create(to=cfg['to_numbers'], from_=cfg['from_number'], body=msg)
+        for t in cfg['to_numbers']:
+            message = client.messages.create(to=t, from_=cfg['from_number'], body=msg)
     except:
         return False
 
@@ -75,5 +75,5 @@ while True:
     runtime = etime - stime
     if r:
         add_perfect_number(n, stime, etime, runtime)
-        print("%s is perfect." % n)
+        sms_send('%s is perfect.' % (n))
     set_last_number(n, stime, etime, runtime)
