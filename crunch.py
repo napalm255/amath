@@ -11,7 +11,8 @@ def sms_send(msg):
         cfg = json.load(open('twilio.cfg'))
         client = TwilioRestClient(cfg['account_sid'], cfg['auth_token'])
         for t in cfg['to_numbers']:
-            message = client.messages.create(to=t, from_=cfg['from_number'], body=msg)
+            print(t, msg)
+            #message = client.messages.create(to=t, from_=cfg['from_number'], body=msg)
     except:
         return False
 
@@ -73,5 +74,5 @@ while True:
     runtime = etime - stime
     if r:
         add_perfect_number(n, stime, etime, runtime)
-        sms_send('%s is perfect.' % (n))
+        sms_send('%s is perfect.\nstarted: %s\nended: %s\nruntime: %s' % (n, stime, etime, runtime))
     set_last_number(n, stime, etime, runtime)
